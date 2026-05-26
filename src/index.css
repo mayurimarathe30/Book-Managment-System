@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+/* ─── Admin dashboard theme tokens ─── */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-dashboard-bg: #eef4fb;
+  --color-dashboard-surface: #ffffff;
+  --color-dashboard-primary: #3b82f6;
+  --color-dashboard-primary-dark: #2563eb;
+  --color-dashboard-primary-light: #dbeafe;
+  --color-dashboard-muted: #64748b;
+  --color-dashboard-border: #e2e8f0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  @apply text-slate-700 antialiased min-h-screen;
+  background: linear-gradient(160deg, #eef4fb 0%, #f8fafc 45%, #eef6ff 100%);
+}
+
+/* Reusable dashboard utilities */
+.dashboard-card {
+  @apply bg-white rounded-2xl border border-slate-100 shadow-[0_4px_24px_-4px_rgba(59,130,246,0.12)] transition-all duration-300;
+}
+
+.dashboard-input {
+  @apply w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50/50 text-slate-800 placeholder-slate-400
+    focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-400 focus:bg-white
+    transition-all duration-200;
+}
+
+.dashboard-btn-primary {
+  @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl
+    bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold text-sm
+    shadow-md shadow-blue-500/25 hover:shadow-lg hover:shadow-blue-500/30
+    hover:from-blue-600 hover:to-blue-700 active:scale-[0.98]
+    transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:active:scale-100;
+}
+
+.dashboard-btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl
+    border border-slate-200 bg-white text-slate-700 font-medium text-sm
+    hover:bg-slate-50 hover:border-slate-300 active:scale-[0.98]
+    transition-all duration-200;
+}
+
+.dashboard-btn-danger {
+  @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl
+    border border-red-200 bg-white text-red-600 font-medium text-sm
+    hover:bg-red-50 hover:border-red-300 active:scale-[0.98]
+    transition-all duration-200;
+}
+
+/* Toast notifications — match dashboard theme */
+.Toastify__toast--success {
+  @apply !bg-blue-600;
+}
+.Toastify__toast--error {
+  @apply !bg-red-500;
+}
