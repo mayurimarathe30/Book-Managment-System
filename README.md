@@ -7,13 +7,13 @@ A modern and responsive Book Management System built using React.js, Vite, Tailw
 ## Live Demo
 
 Netlify Live URL:
-(Add your Netlify link here)
+(https://mayuri-book-managment-system.netlify.app/)
 
 ---
 
 ## 🔗 GitHub Repository
 
-(Add your GitHub repository link here)
+(https://github.com/mayurimarathe30/Book-Managment-System.git)
 
 ---
 
